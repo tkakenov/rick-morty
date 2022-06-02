@@ -6,7 +6,7 @@ class _AppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.color152A3A,
+      backgroundColor: AppColors.color0B1E2D,
       elevation: 0,
       flexibleSpace: SafeArea(
         minimum: const EdgeInsets.symmetric(horizontal: 16),
