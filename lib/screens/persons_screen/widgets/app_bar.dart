@@ -1,8 +1,9 @@
-part of '../first_screen.dart';
+part of '../persons_screen.dart';
 
 class _AppBar extends StatelessWidget with PreferredSizeWidget {
-  const _AppBar({Key? key}) : super(key: key);
+  _AppBar({Key? key}) : super(key: key);
 
+  String nameValue = '';
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -12,9 +13,9 @@ class _AppBar extends StatelessWidget with PreferredSizeWidget {
         minimum: const EdgeInsets.symmetric(horizontal: 16),
         child: TextField(
           onChanged: (value) {
-            BlocProvider.of<PersonBloc>(context)
-                .add(GetPersonEvent(name: value));
+            nameValue = value;
           },
+          textAlignVertical: TextAlignVertical.bottom,
           style: const TextStyle(
             color: Colors.white,
             fontSize: 16,
@@ -46,11 +47,16 @@ class _AppBar extends StatelessWidget with PreferredSizeWidget {
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(50),
             ),
-            suffix: FloatingActionButton(
-              child: const Icon(Icons.abc),
-              elevation: 0,
-              backgroundColor: AppColors.color152A3A.withOpacity(0),
-              onPressed: () {},
+            suffixIcon: Padding(
+              padding: const EdgeInsetsDirectional.only(end: 20),
+              child: IconButton(
+                icon: Image.asset(Images.funel1),
+                onPressed: () {
+                  BlocProvider.of<PersonBloc>(context).add(
+                    GetPersonEvent(name: nameValue, isForSearch: true),
+                  );
+                },
+              ),
             ),
           ),
         ),

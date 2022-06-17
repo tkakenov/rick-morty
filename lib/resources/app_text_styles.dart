@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:rick_and_morty_app/resources/app_colors.dart';
 
 abstract class AppTextStyles {
-  static const fs10w500 = TextStyle(
+  static const fs10w500Blue = TextStyle(
     fontSize: 10,
     fontWeight: FontWeight.w500,
+    height: 1.6,
+    color: AppColors.color22A2BD,
+  );
+  static const fs16w400Blue = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
     height: 1.6,
     color: AppColors.color22A2BD,
   );
@@ -32,7 +38,7 @@ abstract class AppTextStyles {
     height: 1.5,
     color: Color(0xffffffff),
   );
-  static const fs16w500 = TextStyle(
+  static const fs16w500White = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
     height: 1.5,
@@ -42,6 +48,19 @@ abstract class AppTextStyles {
     fontSize: 20,
     fontWeight: FontWeight.w500,
     height: 1.4,
+    color: Color(0xffffffff),
+  );
+  static const fs10w500Grey = TextStyle(
+    fontSize: 10,
+    letterSpacing: 1.5,
+    fontWeight: FontWeight.w500,
+    height: 1.5,
+    color: AppColors.color5B6975,
+  );
+  static const fs13w400White = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+    height: 1.5,
     color: Color(0xffffffff),
   );
 }

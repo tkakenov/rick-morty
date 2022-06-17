@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rick_and_morty_app/bloc/peson_bloc.dart';
 import 'package:rick_and_morty_app/data/person_repo.dart';
 import 'package:rick_and_morty_app/data/dio_settings.dart';
-import 'package:rick_and_morty_app/screens/first_screen/first_screen.dart';
+import 'package:rick_and_morty_app/screens/main_screen/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const FirstScreen(),
+        home: const MainScreen(),
       ),
     );
   }
